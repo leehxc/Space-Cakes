@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Cakes - Futuristic Treats</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="order.js"></script>
+</head>
+<body>
+    <header class="glass">
+        <h1>🚀 Space Cakes</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <h2>Futuristic Flavors, Out of This World!</h2>
+        <p>Experience the taste of the cosmos with our neon-glazed, zero-gravity cakes.</p>
+        <p>December only!!!</p>
+        <a href="#products" class="cta">Shop Now</a>
+    </section>
+    <main>
+        <section id="about" class="glass">
+            <h2>About Space Cakes</h2>
+            <p>We blend advanced baking technology with cosmic inspiration to bring you cakes that are truly out of this world. Taste the future today!</p>
+        </section>
+        <section id="products">
+            <h2>Our Products</h2>
+            <div class="products-grid">
+                <div class="product glass">
+                    <img src="c:\Users\HP\Downloads\muffins2.webp" alt="Vanilla Cake">
+                    <h3>Galactic vanilla Cake</h3>
+                    <p>Rich, dark.</p>
+                </div>
+                <div class="product glass">
+                    <img src="c:\Users\HP\Downloads\muffins1.webp" alt="Choclate Cake">
+                    <h3>Chocolate Cake</h3>
+                    <p>Glowing Chocolate layers with a cosmic glaze.</p>
+                </div>
+                <div class="product glass">
+                    <img src="c:\Users\HP\Downloads\muffins3.webp" alt="Red velvet Cake">
+                    <h3>Zero-Gravity red velvet Cake</h3>
+                    <p>Light as air, bursting with interstellar poi.</p>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="glass">
+            <h2>Contact Us</h2>
+            <p>Email: info@spacecakes.com</p>
+        </section>
+    </main>
+    <footer class="glass">
+                <p>&copy; 2025 Space Cakes. All rights reserved.</p>
+        </footer>
+
+        <!-- Order Modal -->
+        <div id="orderModal" style="display:none;position:fixed;z-index:1000;left:0;top:0;width:100vw;height:100vh;background:rgba(0,0,0,0.7);">
+            <div style="background:#181f2b;max-width:400px;margin:60px auto;padding:30px 24px;border-radius:18px;box-shadow:0 0 30px #00ffe7;position:relative;color:#fff;">
+                <span id="closeModal" style="position:absolute;top:12px;right:18px;font-size:1.7rem;cursor:pointer;">&times;</span>
+                <h2 style="color:#00ffe7;text-align:center;margin-bottom:18px;">Order <span id="orderCakeName"></span></h2>
+                    <form id="orderForm" action="https://formspree.io/f/abcde123" method="POST">
+                        <input type="hidden" id="cakeName" name="Cake Name">
+                        <label for="customerName">Your Name:</label><br>
+                        <input type="text" id="customerName" name="Customer Name" required style="width:100%;margin-bottom:10px;padding:7px;border-radius:6px;border:none;">
+                        <label for="phone">Phone:</label><br>
+                        <input type="tel" id="phone" name="Phone" required pattern="[0-9\-\+\s]{7,}" style="width:100%;margin-bottom:10px;padding:7px;border-radius:6px;border:none;">
+                        <label for="address">Address:</label><br>
+                        <input type="text" id="address" name="Address" required style="width:100%;margin-bottom:10px;padding:7px;border-radius:6px;border:none;">
+                        <label for="quantity">Quantity:</label><br>
+                        <input type="number" id="quantity" name="Quantity" min="1" max="20" value="1" required style="width:100%;margin-bottom:10px;padding:7px;border-radius:6px;border:none;">
+                        <label for="details">Order Details (optional):</label><br>
+                        <textarea id="details" name="Order Details" rows="2" style="width:100%;margin-bottom:14px;padding:7px;border-radius:6px;border:none;"></textarea>
+                        <button type="submit" style="width:100%;padding:12px 0;background:#00ffe7;color:#181f2b;font-weight:bold;border:none;border-radius:8px;font-size:1.1rem;box-shadow:0 0 10px #00ffe7;cursor:pointer;">Place Order</button>
+                    </form>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
